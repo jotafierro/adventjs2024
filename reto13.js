@@ -24,8 +24,8 @@ function isRobotBack(moves) {
     }
   }
 
-  while (/\!|\*|\?/gi.exec(moves)) {
-    const {0: move, index} = /\!|\*|\?/gi.exec(moves)
+  while (/!|\*|\?/gi.exec(moves)) {
+    const {0: move, index} = /!|\*|\?/gi.exec(moves)
     let nextMove = moves[index + 1]
 
     moves = modifiers[move](nextMove, index)
